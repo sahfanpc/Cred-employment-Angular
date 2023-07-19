@@ -1,0 +1,16 @@
+<section class="main">
+    <aside class="container1">
+       <aside class="section-main">
+            <form [formGroup]="loginform" action="" class="loginpage">
+                <h1 class="head">Login</h1>
+                <input type="email" placeholder="Email" formControlName="email">
+                <input type="password" placeholder="password" formControlName="password">
+                <button class="btn btn-primary" type="button" (click)="Submit(loginform.value)">Submit
+</button>
+                <aside class="text-link">
+                    <p>Don't have any account?<a [routerLink]="['/user-register']">sign up</a></p>
+                </aside>
+            </form>
+       </aside>
+    </aside>
+</section>

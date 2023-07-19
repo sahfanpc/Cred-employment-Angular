@@ -1,0 +1,40 @@
+<aside class="nav-section">
+<nav class="main">
+  <nav class="navbar navbar-expand-lg bg-primary fixed-top">
+    <div class="container-fluid">
+      <aside class="navbar-brand fw-bold text-uppercase me-auto" href="#"><img src="../../../assets/bussiness-icon .jpg"width="44rem"height="46rem" alt="" class="img-icon"><span class="img-text"> Tagline</span></aside>
+       <!-- <button class="navbar-toggler me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"  aria-controls="offcanvasExample">
+            <span class="navbar-toggler-icon" data-bs-target="#offcanvasExample"></span>
+          </button> -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!--  -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav  mb-2 mb-lg-0 ms-auto nav-right-grp">
+            <div class="input-group my-4 my-lg-0 ">
+                <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+                <button class="btn btn-secondary" type="button" id="button-addon2"><i class="fa-solid fa-magnifying-glass"></i></button>
+              </div>
+              <!-- <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form> -->
+              <div class="dropdown" [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+               <aside class="profile" [ngSwitch]="userdata.sex.length"><img src="../../../assets/profile-male.jpg" alt="" class="profile-img" *ngSwitchCase="4"><img src="../../../assets/profile-female.jpg" alt="" class="profile-img" *ngSwitchCase="6"></aside>
+               <aside class="username">{{userdata.name}}</aside>
+               <aside class="downdrop-arrow"><i class="fa-solid fa-angle-down"></i></aside>
+              </div>
+              <mat-menu #menu="matMenu">
+               <app-profile></app-profile>
+              </mat-menu>
+        </ul>    
+      </div>
+    </div>
+  </nav>
+ 
+  </nav>
+  
+</aside>
+
+ 

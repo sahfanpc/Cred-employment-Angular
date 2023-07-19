@@ -1,0 +1,25 @@
+
+<div class="sidebar">
+    <ul>
+        <!-- (mouseover)="Showcontent =true" (mouseleave)="Showcontent =false" -->
+        <li  matTooltip="Dashboard"  [ngStyle]="{'background-color': textbutton1 ? 'rgba(65, 176, 241, 0.904)' : 'white'}"
+        matTooltipPosition="right"
+        class="example-button" class="li" (click)="Dashboard()"><i class="fas fa-grip-horizontal"></i></li>
+      <li matTooltip="Add Employees"  [ngStyle]="{'background-color': textbutton2 ? 'rgba(65, 176, 241, 0.904)' : 'white'}"
+      matTooltipPosition="right"
+      class="example-button" class="li" (click)="Add()"><i class="fas fa-user-plus"></i></li>
+     
+      <li  matTooltip="Registered customers"  [ngStyle]="{'background-color': textbutton3 ? 'rgba(65, 176, 241, 0.904)' : 'white'}"
+      matTooltipPosition="right"
+      class="example-button" class="li" (click)="Customers()"><i class="fas fa-user"></i></li>
+      <li  matTooltip="Employee detail"  [ngStyle]="{'background-color': textbutton4 ? 'rgba(65, 176, 241, 0.904)' : 'white'}"
+      matTooltipPosition="right"
+      class="example-button" class="li" (click)="Employe()"><i class="fas fa-user-tie"></i></li>
+      <li  matTooltip="LogOut"
+      matTooltipPosition="right"
+      class="example-button" class="li"(click)="Logout()" ><i class="fas fa-sign-out-alt"></i></li>
+      
+      <!-- Add more menu items as needed -->
+    </ul>
+    
+  </div>

@@ -1,0 +1,113 @@
+
+<div class="main">
+    <section class="main-container">
+       <aside class="section">
+        <header class="heading">
+            <p style="font-size: 2rem;font-weight: 600;margin: 0;">Employee Details</p>
+            <p style="font-size: 1.4rem;font-weight: 300;margin: 0;">TAGLINE</p>
+        </header>
+        <body class="form-fill">
+<!-- f-name -->
+<form action="" [formGroup]="employeregister" class="form-fill1">
+            <mat-form-field appearance="outline">
+                <mat-label>First Name</mat-label>
+                <input type="text" matInput placeholder="First Name" formControlName="fname">
+              </mat-form-field>
+              <!-- l-name -->
+              <mat-form-field appearance="outline">
+                <mat-label>Last Name</mat-label>
+                <input type="text" matInput placeholder="Last Name" formControlName="lname">
+              </mat-form-field>
+              <!-- age -->
+              <mat-form-field appearance="outline">
+                <mat-label>Age</mat-label>
+                <input type="number" matInput placeholder="Age" formControlName="age">
+              </mat-form-field>
+              <!-- dob -->
+              <mat-form-field appearance="outline" class="example-form-field" >
+                <mat-label>Choose a date</mat-label>
+                <input matInput [matDatepicker]="datepicker" formControlName="date">
+                <mat-datepicker-toggle matSuffix [for]="datepicker"></mat-datepicker-toggle>
+                <mat-datepicker #datepicker>
+                  <mat-datepicker-actions>
+                    <button mat-button matDatepickerCancel>Cancel</button>
+                    <button mat-raised-button color="primary" matDatepickerApply>Apply</button>
+                  </mat-datepicker-actions>
+                </mat-datepicker>
+              </mat-form-field>
+              <!-- number -->
+              <mat-form-field appearance="outline">
+                <mat-label>Phone Number</mat-label>
+                <input type="number" matInput placeholder="Number" formControlName="number">
+              </mat-form-field>
+              <!-- email -->
+              <mat-form-field appearance="outline">
+                <mat-label>Email</mat-label>
+                <input type="email" matInput placeholder="Email" formControlName="email">
+              </mat-form-field>
+             
+              <!-- condry -->
+                <mat-form-field class="example-full-width" appearance="outline">
+                  <mat-label>Country</mat-label>
+                  <input matInput
+                         aria-label="State"
+                         [matAutocomplete]="auto"
+                         [formControl]="stateCtrl" formControlName="country">
+                  <mat-autocomplete #auto="matAutocomplete">
+                    <mat-option *ngFor="let state of filteredStates | async" [value]="state.name">
+                      <img alt="" class="example-option-img" [src]="state.flag" height="25">
+                      <span>{{state.name}}</span> |
+                      <small>Population: {{state.population}}</small>
+                    </mat-option>
+                  </mat-autocomplete>
+                </mat-form-field>
+<!-- state -->
+<mat-form-field appearance="outline">
+    <mat-label>State</mat-label>
+    <input type="text" matInput placeholder="State" formControlName="state">
+  </mat-form-field>
+  <!-- city -->
+  <mat-form-field appearance="outline">
+    <mat-label>City</mat-label>
+    <input type="text" matInput placeholder="City" formControlName="city">
+  </mat-form-field>
+  <!-- role -->
+  <mat-form-field appearance="outline">
+    <mat-label>Role</mat-label>
+    <input type="text" matInput placeholder="Role" formControlName="rule">
+  </mat-form-field>
+  <!-- pin -->
+  <mat-form-field appearance="outline">
+    <mat-label>PIN</mat-label>
+    <input type="text" matInput placeholder="PIN" formControlName="pin">
+  </mat-form-field>
+  <!-- address -->
+  <mat-form-field appearance="outline">
+    <mat-label>Address 1</mat-label>
+    <textarea matInput formControlName="adderss1"></textarea>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Address 2</mat-label>
+    <textarea matInput formControlName="adderss2"></textarea>
+  </mat-form-field>
+
+   <!-- sex -->
+   <label style="font-size: 1.8rem;color: gray;">Sex:</label>
+
+   <mat-radio-group aria-label="Sex" style="display: flex;flex-direction: column;" formControlName="value">
+     <mat-radio-button value="male"> Male</mat-radio-button>
+     <mat-radio-button value="female"> Female</mat-radio-button>
+   </mat-radio-group>
+
+
+   <button mat-raised-button color="primary" style="width: 100%;padding: 1.5rem;">Add & Save</button>
+
+</form>
+        </body>
+       </aside>
+
+
+    </section>
+      
+  </div>
