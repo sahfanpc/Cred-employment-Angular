@@ -2,7 +2,96 @@
 
 <div class="main">
     <section class="main-container">
-        <p>employees-list works!</p>
+        <aside class="header">
+            <aside class="header-left" style="font-size: 1.4rem;font-weight: 500;">
+                E-List
+            </aside>
+            <aside class="header-right">
+            <aside class="search">
+                <div class="input-container">
+                    <i class="fas fa-search material-icons-outlined icon"></i>
+                    <input class="input-field" type="text" placeholder="Search">
+                    <!-- (keyup)="search()"   [(ngModel)]="searchTerm" -->
+                </div>
+            </aside>
+            <aside class="filter">
+                <i class="fas fa-brush"></i>
+                <span style="font-weight: 300;">Mode</span>
+            </aside>
+            <aside class="Change-domain">
+                <i class="fas fa-exchange"></i>
+                <span style="font-weight: 300;">Domain</span>
+            </aside>
+        </aside>
+        </aside>
+        <aside class="table-body">
+            <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>ID</th>
+                      <th>Name/position</th>
+                      <th>Age</th>
+                      <th>Number</th>
+                      <th>Email</th>
+                      <th>Country</th>
+                      <th>Profile</th>
+                    </tr>
+                  </thead>
+                  <tbody *ngIf="data">
+                    <tr *ngFor="let item of data,let i=index">
+                      <td>{{i+1}}</td>
+                      <td><aside class="table-profile" [ngSwitch]="item.sex.length">
+                        <img *ngSwitchCase="4" src="../../../assets/profile-male.jpg" width="40rem" height="40rem" alt="" class="profile">
+                        <img *ngSwitchCase="6" src="../../../assets/profile-female.jpg" width="40rem" height="40rem" alt="" class="profile">
+                         
+                        <aside class="condent">
+                            <p style="margin: 0;">{{ item.fname }} {{item.lname}}</p>
+                            <p style="margin: 0;">{{item.role}}</p>
+                        </aside>
+                    </aside></td>
+                      <!-- <td>{{ item.fname }} {{item.lname}}</td> -->
+                      <td>{{ item.age }}</td>
+                      <td>{{item.number}}</td>
+                      <td>{{item.email}}</td>
+                      <td>{{item.country}}</td>
+                      <td><aside class="td-profile"><button mat-raised-button (click)="Passdata(i)" [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu"><i class="far fa-eye" style="font-size:1.4rem;color: rgb(0, 132, 255);"></i></button>
+                        <mat-menu #menu="matMenu">
+                            
+
+<section class="profile" style=" width: 18.6rem;height: auto;border-radius: .4rem;font-family: 'Poppins', sans-serif;">
+    <aside class="profile-container" style=" width: 100%;height: 100%;">
+        <aside class="first-section" style="position: relative; height: 11rem;" [ngSwitch]="item.sex.length">
+            <aside class="upper-leyar" style="height: 55%; background-color: rgb(100, 142, 196);"></aside>
+            <aside class="lover-leyar" style=" height: 45%; display: flex; justify-content: space-between; padding: 1.3rem; background-color: #fff;">
+                <p style="margin-top: 1.3rem; font-size: 1.5rem; font-weight: 600;">{{item.fname}} {{item.lname}}</p>
+               </aside>
+
+            <aside *ngSwitchCase="4" class="position-layer" style=" bottom: 2.3rem;left: 1rem;width: 6.5rem; height: 6.5rem;border-radius: 50%;position: absolute;background: #fff; background-image: url(../../../assets/profile-male.jpg); background-position: center;background-size: cover; border: 4px solid white;"> -->
+
+            </aside>
+            <aside *ngSwitchCase="6" class="position-layer1" style=" bottom: 2.3rem;left: 1rem;width: 6.5rem;height: 6.5rem;border-radius: 50%;position: absolute; background: #fff; background-image: url(../../../assets/profile-female.jpg);background-position: center;background-size: cover; border: 4px solid white;">
+
+            </aside>
+        </aside>
+        <aside class="second-section" style=" padding-top: .5rem;padding-left:1.2rem ;display: flex; flex-direction: column;color: gray; ">
+            <p>  <i class="fas fa-globe"></i> :{{ item.country}}</p>  
+     <p><i class="fab fa-usps"></i> :{{ item.state}}</p>
+     <p> <i class="fas fa-city"></i> :{{ item.city}}</p>
+            <p><i class="fas fa-calendar"></i> :{{ item.date}}</p>
+            <p><i class="fas fa-address-book"></i> :{{ item.address1}},{{ item.address2}},{{ item.pin}}</p>
+        </aside>
+    </aside>
+</section>
+
+                           </mat-menu></aside>
+                    </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+        </aside>
+        
     </section>
       
   </div>

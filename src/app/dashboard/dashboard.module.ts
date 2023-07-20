@@ -23,7 +23,11 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { DialogComponent } from './dialog/dialog.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import { RouterLink } from '@angular/router';
+import {MatTableModule} from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
@@ -35,6 +39,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AddEmployeesComponent,
     EmployeesListComponent,
     ProfileComponent,
+    DialogComponent,
     
     
   ],
@@ -54,7 +59,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatRadioModule,
     MatAutocompleteModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatDialogModule,
+    RouterLink,
+    MatTableModule,
+    MatPaginatorModule
+    // MatFormFieldAppearance
   ]
 })
 export class DashboardModule { }

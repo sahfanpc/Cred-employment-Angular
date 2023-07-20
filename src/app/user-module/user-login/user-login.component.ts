@@ -19,7 +19,7 @@ loginform=this.fb.group({
 
   Submit(data:any){
 const check = this.db.logUser(data);
-if(check){
+if(check == true){
   alert("login seccess")
   this.router.navigateByUrl('dashboard')
 }else{

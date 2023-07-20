@@ -52,7 +52,7 @@
                   <input matInput
                          aria-label="State"
                          [matAutocomplete]="auto"
-                         [formControl]="stateCtrl" formControlName="country">
+                        formControlName="country">
                   <mat-autocomplete #auto="matAutocomplete">
                     <mat-option *ngFor="let state of filteredStates | async" [value]="state.name">
                       <img alt="" class="example-option-img" [src]="state.flag" height="25">
@@ -74,7 +74,7 @@
   <!-- role -->
   <mat-form-field appearance="outline">
     <mat-label>Role</mat-label>
-    <input type="text" matInput placeholder="Role" formControlName="rule">
+    <input type="text" matInput placeholder="Role" formControlName="role">
   </mat-form-field>
   <!-- pin -->
   <mat-form-field appearance="outline">
@@ -84,24 +84,24 @@
   <!-- address -->
   <mat-form-field appearance="outline">
     <mat-label>Address 1</mat-label>
-    <textarea matInput formControlName="adderss1"></textarea>
+    <textarea matInput formControlName="address1"></textarea>
   </mat-form-field>
 
   <mat-form-field appearance="outline">
     <mat-label>Address 2</mat-label>
-    <textarea matInput formControlName="adderss2"></textarea>
+    <textarea matInput formControlName="address2"></textarea>
   </mat-form-field>
 
    <!-- sex -->
    <label style="font-size: 1.8rem;color: gray;">Sex:</label>
 
-   <mat-radio-group aria-label="Sex" style="display: flex;flex-direction: column;" formControlName="value">
+   <mat-radio-group aria-label="Sex" style="display: flex;flex-direction: column;" formControlName="sex">
      <mat-radio-button value="male"> Male</mat-radio-button>
      <mat-radio-button value="female"> Female</mat-radio-button>
    </mat-radio-group>
 
 
-   <button mat-raised-button color="primary" style="width: 100%;padding: 1.5rem;">Add & Save</button>
+   <button mat-raised-button (click)="Submit(employeregister.value)" color="primary" style="width: 100%;padding: 1.5rem;">Add & Save</button>
 
 </form>
         </body>
