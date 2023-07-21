@@ -12,8 +12,9 @@
        align-items: center;
        font-family: 'Poppins', sans-serif;
        .section-main{
+        padding: 1rem;
         width: 25rem;
-        height: 60%;
+        height: 35rem;
         /* background-color: antiquewhite; */
         display: flex;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -24,7 +25,10 @@
         align-items: center;
         @media only #{$desktop-max-md}{
             width: 23rem;
-            height: 80%;
+            // height: 30rem;
+        }
+        @media only #{$desktop-max-lg}{
+            height: 30rem;
         }
         .loginpage{
             text-align: center;
