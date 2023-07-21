@@ -1,6 +1,8 @@
+@import "../../../assets/scss/base/variables";
 .main{
     width: 100%;
     height: 100%;
+    overflow-y: scroll;
     .main-container{
       font-family: 'Poppins', sans-serif;
      width: 100%;
@@ -56,8 +58,26 @@
       background-color: aquamarine;
      }
      .second-box{
+      display: flex;gap: 2rem;margin-top: 2rem;justify-content: space-between;
+      @media only #{$desktop-max-lg-bgs-1115} {
+         flex-wrap: wrap;
+      }
+      @media only #{ $tab-max}{
+        justify-content: center;
+      }
+      .graph-box{
+         @media only #{ $tab-max}{
+            width: 38rem;
+         }
+         display: flex;flex-direction: column;gap: 1.5rem;box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;width:44rem;
+      }
       .box{
-         width: 47%;box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;display: flex;
+         @media only #{$desktop-max-lg-bgs-1115} {
+           width: 100%;
+           height: auto;
+         }
+         width: 47%; height: 31rem;box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;display: flex;
+         overflow-y: scroll;
          flex-wrap: wrap;
          justify-content: center;
          align-items: center;
@@ -88,6 +108,9 @@
             background: #811b1b; /* Color of the scrollbar handle */
           }
       }
+      ::-webkit-scrollbar {
+         width: 6px; /* Width of the scrollbar */
+       }
      }
     }
  }
